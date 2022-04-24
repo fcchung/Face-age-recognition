@@ -1,4 +1,3 @@
-absl-py @ file:///home/conda/feedstock_root/build_artifacts/absl-py_1637088766493/work
 aiohttp @ file:///Users/runner/miniforge3/conda-bld/aiohttp_1637087163469/work
 aiosignal @ file:///home/conda/feedstock_root/build_artifacts/aiosignal_1636093929600/work
 appdirs @ file:///home/conda/feedstock_root/build_artifacts/appdirs_1603108395799/work
