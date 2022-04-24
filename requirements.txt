@@ -1,37 +1,3 @@
-appdirs @ file:///home/conda/feedstock_root/build_artifacts/appdirs_1603108395799/work
-appnope @ file:///Users/runner/miniforge3/conda-bld/appnope_1610094662606/work
-argon2-cffi @ file:///Users/runner/miniforge3/conda-bld/argon2-cffi_1633990794010/work
-astor @ file:///home/conda/feedstock_root/build_artifacts/astor_1593610464257/work
-astunparse @ file:///home/conda/feedstock_root/build_artifacts/astunparse_1610696312422/work
-async-generator==1.10
-async-timeout @ file:///home/conda/feedstock_root/build_artifacts/async-timeout_1637092647930/work
-attrs @ file:///home/conda/feedstock_root/build_artifacts/attrs_1620387926260/work
-backcall @ file:///home/conda/feedstock_root/build_artifacts/backcall_1592338393461/work
-backports.functools-lru-cache @ file:///home/conda/feedstock_root/build_artifacts/backports.functools_lru_cache_1618230623929/work
-beautifulsoup4==4.10.0
-bleach @ file:///home/conda/feedstock_root/build_artifacts/bleach_1629908509068/work
-blinker==1.4
-blis @ file:///Users/runner/miniforge3/conda-bld/cython-blis_1645002704988/work
-brotlipy==0.7.0
-cachetools @ file:///home/conda/feedstock_root/build_artifacts/cachetools_1633010882559/work
-catalogue @ file:///Users/runner/miniforge3/conda-bld/catalogue_1638867380792/work
-certifi==2021.10.8
-cffi @ file:///Users/runner/miniforge3/conda-bld/cffi_1631636293358/work
-chardet @ file:///Users/runner/miniforge3/conda-bld/chardet_1610093454858/work
-charset-normalizer @ file:///home/conda/feedstock_root/build_artifacts/charset-normalizer_1626371162869/work
-click @ file:///Users/runner/miniforge3/conda-bld/click_1635822911388/work
-colorama @ file:///home/conda/feedstock_root/build_artifacts/colorama_1602866480661/work
-conda==4.12.0
-conda-package-handling @ file:///Users/runner/miniforge3/conda-bld/conda-package-handling_1618231726924/work
-cryptography @ file:///Users/runner/miniforge3/conda-bld/cryptography_1635145370133/work
-cycler @ file:///home/conda/feedstock_root/build_artifacts/cycler_1635519461629/work
-cymem @ file:///Users/runner/miniforge3/conda-bld/cymem_1636053327370/work
-Cython @ file:///Users/runner/miniforge3/conda-bld/cython_1648737815461/work
-dataclasses @ file:///home/conda/feedstock_root/build_artifacts/dataclasses_1628958434797/work
-debugpy @ file:///Users/runner/miniforge3/conda-bld/debugpy_1627074942557/work
-decorator @ file:///home/conda/feedstock_root/build_artifacts/decorator_1631346842025/work
-defusedxml @ file:///home/conda/feedstock_root/build_artifacts/defusedxml_1615232257335/work
-entrypoints @ file:///home/conda/feedstock_root/build_artifacts/entrypoints_1605121927639/work/dist/entrypoints-0.3-py2.py3-none-any.whl
 Flask @ file:///home/conda/feedstock_root/build_artifacts/flask_1648714429286/work
 flatbuffers @ file:///home/conda/feedstock_root/build_artifacts/python-flatbuffers_1617723079010/work
 fonttools @ file:///Users/runner/miniforge3/conda-bld/fonttools_1637203195888/work
