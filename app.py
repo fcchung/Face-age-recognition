@@ -2,6 +2,7 @@ from flask import Flask, render_template, request
 import cv2
 from keras.models import load_model
 import numpy as np
+import os
 
 app = Flask(__name__)
 
@@ -15,11 +16,14 @@ def index():
 @app.route('/after', methods=['GET', 'POST'])
 def after():
     img = request.files['file1']
+    #print(img)
 
-    img.save('static/file.jpg')
+    img.save(os.path.join(app.root_path,'static/file.jpg'))
 
     ####################################
-    img1 = cv2.imread('static/file.jpg')
+    img1 = cv2.imread(os.path.join(app.root_path,'static/file.jpg'))
+    #img1 = cv2.imread(img)
+    print(img1)
     gray = cv2.cvtColor(img1, cv2.COLOR_BGR2GRAY)
     cascade = cv2.CascadeClassifier('haarcascade_frontalface_alt2.xml')
     faces = cascade.detectMultiScale(gray, 1.1, 3)
