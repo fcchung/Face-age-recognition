@@ -1,7 +1,11 @@
+import base64
+import io
+
 from flask import Flask, render_template, request
 from gad import highlightFace
 import cv2
 import argparse
+import numpy as np
 import os
 
 app = Flask(__name__)
@@ -11,7 +15,7 @@ app = Flask(__name__)
 def index():
     return render_template('index.html')
 
-@app.route('/after', methods=['GET', 'POST'])
+@app.route('/', methods=['GET', 'POST'])
 def after():
     parser = argparse.ArgumentParser()
     parser.add_argument('--image')
@@ -34,9 +38,15 @@ def after():
     genderNet = cv2.dnn.readNet(genderModel, genderProto)
 
     padding = 20
-    img = request.files['file1']
-    img.save(os.path.join(app.root_path, 'static/file.jpg'))
-    input_image = cv2.imread(os.path.join(app.root_path, 'static/file.jpg'))
+    #img = request.files['file1']
+    #img.save(os.path.join(app.root_path, 'static/file.jpg'))
+    #img_by = io.BytesIO()
+    #img.save(img_by, "JPEG")
+    #encoded_img_data = base64.b64encode(img_by.getvalue())
+    #input_image = cv2.imread(os.path.join(app.root_path, 'static/file.jpg'))
+    #input_image = cv2.imread(encoded_img_data.decode('utf-8'))
+
+    input_image = cv2.imdecode(np.fromstring(request.files['file1'].read(), np.uint8), cv2.IMREAD_UNCHANGED)
 
     resultImg, faceBoxes = highlightFace(faceNet, input_image)
     if not faceBoxes:
@@ -61,9 +71,13 @@ def after():
 
         cv2.putText(resultImg, f'{gender}, {age}', (faceBox[0], faceBox[1] - 10), cv2.FONT_HERSHEY_SIMPLEX, 0.8,
                     (0, 255, 255), 2, cv2.LINE_AA)
+    # result_img_by = io.BytesIO()
+    #resultImg.save(result_img_by, "JPEG")
+    #encoded_result_img = base64.b64encode(result_img_by.getvalue())
+    display_gender = f'Gender: {gender}'
+    display_age = f'Age: {age[1:-1]} years'
 
-    cv2.imwrite('static/after.jpg', resultImg)
-    return render_template("after.html")
+    return render_template("index.html", gender=display_gender, age=display_age)
 
 
 
